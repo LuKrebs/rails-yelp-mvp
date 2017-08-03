@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h4 class="text-center"><%= @restaurant.name %></h4>
+        <p><%= @restaurant.category.capitalize %></p>
+        <p><%= @restaurant.address %>, <%= @restaurant.phone_number %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <% @reviews.each do |review| %>
+          <p class="text-center"><%= review.content %></p>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <%= render 'reviews/form' %>
+      </div>
+    </div>
+  </div>
+</div>

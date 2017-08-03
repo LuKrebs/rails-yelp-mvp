@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="container">
+    <%= link_to "Create restaurant", new_restaurant_path %>
+    <% @restaurants.each do |restaurant| %>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 well">
+      <%= link_to restaurant.name, restaurant_path(restaurant), class: 'card-link' %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
